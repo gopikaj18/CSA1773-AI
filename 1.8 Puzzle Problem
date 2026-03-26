@@ -1,0 +1,36 @@
+from collections import deque
+
+goal = [1,2,3,4,5,6,7,8,0]
+
+def get_neighbors(state):
+    moves = []
+    i = state.index(0)
+    row, col = i//3, i%3
+
+    directions = [(-1,0),(1,0),(0,-1),(0,1)]
+    for dr, dc in directions:
+        r, c = row+dr, col+dc
+        if 0 <= r < 3 and 0 <= c < 3:
+            new = state[:]
+            j = r*3 + c
+            new[i], new[j] = new[j], new[i]
+            moves.append(new)
+    return moves
+
+def bfs(start):
+    q = deque([(start, [])])
+    visited = set()
+
+    while q:
+        state, path = q.popleft()
+        if state == goal:
+            return path
+
+        visited.add(tuple(state))
+        for n in get_neighbors(state):
+            if tuple(n) not in visited:
+                q.append((n, path+[n]))
+    return None
+
+start = [1,2,3,4,0,5,6,7,8]
+print(bfs(start))
