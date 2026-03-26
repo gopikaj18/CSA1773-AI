@@ -1,0 +1,23 @@
+colors = ['R','G','B']
+graph = {'A':['B','C'],'B':['A','C'],'C':['A','B']}
+
+def valid(node, color, assignment):
+    for n in graph[node]:
+        if assignment.get(n)==color:
+            return False
+    return True
+
+def solve(assignment):
+    if len(assignment)==len(graph):
+        print(assignment)
+        return True
+
+    node = list(graph.keys())[len(assignment)]
+    for c in colors:
+        if valid(node,c,assignment):
+            assignment[node]=c
+            if solve(assignment):
+                return True
+            del assignment[node]
+
+solve({})
