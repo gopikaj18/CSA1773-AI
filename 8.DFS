@@ -1,0 +1,8 @@
+def dfs(v, visited=set()):
+    if v not in visited:
+        print(v, end=' ')
+        visited.add(v)
+        for n in graph[v]:
+            dfs(n, visited)
+
+dfs('A')
