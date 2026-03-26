@@ -1,0 +1,5 @@
+parent(ram, gopi).
+male(ram).
+female(gopi).
+
+father(X,Y):- parent(X,Y), male(X).
