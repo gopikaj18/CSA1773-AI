@@ -1,0 +1,8 @@
+rooms = {'A':'Dirty','B':'Dirty'}
+pos = 'A'
+
+for _ in range(2):
+    if rooms[pos]=='Dirty':
+        rooms[pos]='Clean'
+        print("Cleaned", pos)
+    pos = 'B' if pos=='A' else 'A'
