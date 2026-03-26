@@ -1,0 +1,2 @@
+state(middle, onbox, middle, hasnot).
+move(state(middle,onbox,middle,hasnot), grasp).
