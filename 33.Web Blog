@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+</head>
+<body>
+
+<h1>Welcome to My Blog</h1>
+
+<p>This is my first blog post.</p>
+
+<h2>About Me</h2>
+<p>I am learning AI and Web Development.</p>
+
+<h2>Visit My Favorite Site</h2>
+<a href="https://www.google.com" target="_blank">Go to Google</a>
+
+<h2>Image Example</h2>
+<img src="https://via.placeholder.com/150" alt="Sample Image">
+
+<h2>List Example</h2>
+<ul>
+    <li>AI</li>
+    <li>ML</li>
+    <li>Web Dev</li>
+</ul>
+
+</body>
+</html>
