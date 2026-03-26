@@ -1,0 +1,16 @@
+% Facts
+fruit(apple).
+fruit(banana).
+fruit(grape).
+
+color(red).
+color(yellow).
+color(green).
+
+% Rule: assign different colors to fruits
+assign_colors(A,B,C) :-
+    color(A), color(B), color(C),
+    A \= B, B \= C, A \= C.
+
+% Query example:
+% ?- assign_colors(A,B,C).
