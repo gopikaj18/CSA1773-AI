@@ -1,0 +1,14 @@
+graph = {'A':['B','C'],'B':['D'],'C':['E'],'D':[],'E':[]}
+
+def bfs(start):
+    visited = set()
+    q = [start]
+
+    while q:
+        v = q.pop(0)
+        if v not in visited:
+            print(v, end=' ')
+            visited.add(v)
+            q.extend(graph[v])
+
+bfs('A')
